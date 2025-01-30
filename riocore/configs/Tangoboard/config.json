@@ -308,6 +308,18 @@
                     "net": "spindle.0.on"
                 }
             }
+        },
+        {
+            "type": "blink",
+            "pins": {
+                "led": {
+                    "pin": "LED:L1"
+                }
+            }
         }
-    ]
+    ],
+    "linuxcnc": {
+        "machinetype": "ldelta"
+    },
+    "toolchain": "icestorm"
 }
