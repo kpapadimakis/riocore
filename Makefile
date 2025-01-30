@@ -86,7 +86,7 @@ docker-run-debian12_deb:
 docker-run:
 	docker build -t riocore-run -f dockerfiles/Dockerfile.debian12-run .
 	docker rm -f riocore-run || true
-	docker run --privileged --net=host -v /tmp/.X12-unix:/tmp/.X12-unix -e DISPLAY=$$DISPLAY -v $$HOME/.Xauthority:/root/.Xauthority -v $(CURDIR):/usr/src/riocore -v $(CURDIR):/workspace -e DISPLAY=$$DISPLAY -v $$HOME/.Xauthority:/root/.Xauthority --name riocore-run -t -i riocore-run /bin/bash -c "cd /usr/src/riocore; PATH=$$PATH:/opt/oss-cad-suite/bin/ bin/rio-setup $(CONFIG)"
+	docker run --privileged --net=host -e DISPLAY=$$DISPLAY -v $$XAUTHORITY:/root/.Xauthority -v $(CURDIR):/usr/src/riocore -v $(CURDIR):/workspace -e DISPLAY=$$DISPLAY -v $$XAUTHORITY:/root/.Xauthority --name riocore-run -t -i riocore-run /bin/bash -c "cd /usr/src/riocore; ls -lrt /dev; whoami; echo ==========; PATH=$$PATH:/opt/oss-cad-suite/bin/ bin/rio-setup $(CONFIG)"
 	docker rm -f riocore-run || true
 
 docker-run-rpi:
