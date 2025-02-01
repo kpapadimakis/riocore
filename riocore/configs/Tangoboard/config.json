@@ -334,34 +334,6 @@
                     "pin": "LED:L1"
                 }
             }
-        },
-        {
-            "type": "bitout",
-            "pins": {
-                "bit": {
-                    "modifier": [
-                        {
-                            "type": "invert"
-                        }
-                    ],
-                    "pin": "LED:L2"
-                }
-            },
-            "name": "led2out"
-        },
-        {
-            "type": "bitout",
-            "pins": {
-                "bit": {
-                    "modifier": [
-                        {
-                            "type": "invert"
-                        }
-                    ],
-                    "pin": "LED:L3"
-                }
-            },
-            "name": "led3out"
         }
     ],
     "linuxcnc": {
