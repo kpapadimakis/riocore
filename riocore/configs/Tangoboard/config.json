@@ -262,10 +262,28 @@
             "type": "stepdir",
             "pins": {
                 "step": {
-                    "pin": "JOINT5:STEP"
+                    "pin": "LED:L5",
+                    "modifier": [
+                        {
+                            "type": "invert"
+                        }
+                    ]
                 },
                 "dir": {
-                    "pin": "JOINT5:DIR"
+                    "pin": "LED:L6",
+                    "modifier": [
+                        {
+                            "type": "invert"
+                        }
+                    ]
+                },
+                "en": {
+                    "modifier": [
+                        {
+                            "type": "invert"
+                        }
+                    ],
+                    "pin": "LED:L4"
                 }
             },
             "is_joint": true
